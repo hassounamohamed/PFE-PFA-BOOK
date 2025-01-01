@@ -1,0 +1,68 @@
+/* Ensure full viewport height */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif; /* General font for the app */
+}
+
+/* Body styling to set the background and ensure content is centered */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: aqua; /* Fallback background color */
+}
+
+/* Container for the help section */
+.help {
+    background: linear-gradient(to right, rgba(78, 115, 223, 0.7), rgba(30, 61, 88, 0.7)), url('/back.png'); /* Gradient + Background image */
+    color: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 40px auto;
+    text-align: center;
+    background-size: cover; /* Ensures the background image covers the container */
+    background-position: center; /* Centers the background image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 80vh; /* Makes the container take up 80% of the viewport height */
+}
+
+/* Title styling */
+.help h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Description styling */
+.help h3 {
+    font-size: 1.2em;
+    line-height: 1.6;
+    font-family: 'Arial', sans-serif;
+    font-weight: 400;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+/* Optional: Add a hover effect for the title */
+.help h1:hover {
+    color: #f39c12;
+    cursor: pointer;
+}
+
+/* Additional optional styling to enhance the appearance */
+.help p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    font-weight: 300;
+    margin-top: 20px;
+}

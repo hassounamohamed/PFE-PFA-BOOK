@@ -1,0 +1,134 @@
+.left-sidebar {
+    width: 200px;
+    height: 500px;
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    color: #fff;
+    position: fixed;
+    top: 50%; /* Adjusted to move it higher on the screen */
+    left: 20px; /* Moves the sidebar slightly away from the edge */
+    transform: translateY(-50%); /* Centers the sidebar vertically */
+    border-radius: 10%;
+    padding: 20px;
+    z-index: 999;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+    width: 150px;
+    margin-bottom: 30px; /* Adds space below the logo */
+}
+
+.wrap-input-18 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrap-input-18 .search {
+    margin: 20px;
+}
+
+.wrap-input-18 .search > div {
+    display: inline-block;
+    position: relative;
+}
+
+.wrap-input-18 .search > div:after {
+    content: "";
+    background: white;
+    width: 4px;
+    height: 20px;
+    position: absolute;
+    top: 40px;
+    right: 2px;
+    transform: rotate(135deg);
+}
+
+.wrap-input-18 .search > div > input {
+    color: white;
+    font-size: 16px;
+    background: transparent;
+    width: 25px;
+    height: 25px;
+    padding: 10px;
+    border: solid 3px white;
+    outline: none;
+    border-radius: 35px;
+    transition: width 0.5s;
+}
+
+.wrap-input-18 .search > div > input::placeholder {
+    color: #efefef;
+    opacity: 0;
+    transition: opacity 150ms ease-out;
+}
+
+.wrap-input-18 .search > div > input:focus::placeholder {
+    opacity: 1;
+}
+
+.wrap-input-18 .search > div > input:focus,
+.wrap-input-18 .search > div > input:not(:placeholder-shown) {
+    width: 200px;
+}
+
+/* Icon Container */
+.icon-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px; /* Adds space between the search bar and icons */
+    align-items: center;
+}
+
+.icon {
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.icon:hover {
+    color: #f39c12; /* Highlight color on hover */
+}
+
+/* Optional: Add spacing between each icon */
+.icon-container i {
+    margin-bottom: 15px;
+}
+img{
+    border-radius: 10%;
+}
+.icon-container i {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.icon-container i::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    white-space: nowrap;
+}
+
+.icon-container i:hover::after {
+    opacity: 1;
+    visibility: visible;
+}

@@ -1,0 +1,44 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333; /* Dark text */
+  }
+  
+  /* Home Section */
+  .home {
+    text-align: center;
+    padding: 50px 20px;
+    max-width: 800px;
+    margin: 40px auto; /* Center the content */
+    background-color: #ffffff; /* White background */
+   
+  }
+  
+  /* Subheading */
+  .subheading {
+    color: #6c63ff; /* Purple */
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    letter-spacing: 1px; /* Slight spacing */
+    text-transform: uppercase;
+  }
+  
+  /* Main Heading */
+  .main-heading {
+    font-size: 28px;
+    color: #212529; /* Dark gray */
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* Description */
+  .description {
+    font-size: 16px;
+    color: #495057; /* Medium gray */
+    line-height: 1.8;
+  }
+  

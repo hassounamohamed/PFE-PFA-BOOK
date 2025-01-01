@@ -1,1 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+/* Set the height of the html and body to cover the full viewport */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* Apply background image to the body */
+body {
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    background-image: url('/back.png');
+    background-size: cover; /* Ensures the image covers the whole body */
+    background-position: center; /* Centers the background image */
+    background-attachment: fixed; /* Keeps the background fixed while scrolling */
+}

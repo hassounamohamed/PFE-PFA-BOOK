@@ -1,0 +1,35 @@
+/* Ensure full viewport height */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Main container that wraps all content, with Flexbox layout */
+.app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Full height of the viewport */
+}
+
+/* Content section that takes the remaining space */
+.content {
+    flex: 1; /* This ensures the content takes the remaining space */
+}
+
+/* Footer Section */
+.footer {
+    background-color: #212529; /* Dark gray background */
+    color: #ffffff; /* White text */
+    text-align: center; /* Center-align content */
+    padding: 20px 10px; /* Add spacing inside the footer */
+    font-size: 14px; /* Slightly smaller font size */
+    line-height: 1.5;
+    border-top: 2px solid #6c63ff; /* Purple border at the top */
+}
+
+/* Footer paragraph styling */
+.footer p {
+    margin: 0; /* Remove default margin */
+    font-family: 'Arial', sans-serif;
+}
