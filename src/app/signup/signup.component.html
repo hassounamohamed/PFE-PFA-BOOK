@@ -1,0 +1,27 @@
+<div class="signup-container">
+    <form class="signup-form">
+      <h2>Sign Up</h2>
+      
+      <mat-form-field>
+        <mat-label>Username</mat-label>
+        <input matInput type="text" placeholder="Enter your username" />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input matInput type="email" placeholder="Enter your email" />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Password</mat-label>
+        <input matInput type="password" placeholder="Enter your password" />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Confirm Password</mat-label>
+        <input matInput type="password" placeholder="Confirm your password" />
+      </mat-form-field>
+      <button type="submit">Sign Up</button>
+      <p class="login-link">
+        Already have an account? <a routerLink="/login" routerLinkActive="active">Log In</a>
+      </p>
+    </form>
+  </div>
+<router-outlet></router-outlet>

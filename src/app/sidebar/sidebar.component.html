@@ -1,5 +1,8 @@
 <div class="left-sidebar">
-    <img src="logo.jpg" class="i" alt="logo PFE PFA BOOK" class="logo">
+    <a routerLink="/home" routerLinkActive="active">
+        <img src="logo.jpg" class="i" alt="logo PFE PFA BOOK" class="logo">
+    </a>
+    
 
     <div class="wrap-input-18">
         <div class="search">
@@ -10,7 +13,10 @@
     </div>
 
     <div class="icon-container">
-        <i class="fa fa-user-circle icon" data-tooltip="Account"></i> 
+        <a routerLink="/login" routerLinkActive="active">
+            <i class="fa fa-user-circle icon" data-tooltip="Account"></i>
+        </a>
+         
         <i class="fa-regular fa-heart icon" data-tooltip="Favorite"></i>
         <a routerLink="/help" routerLinkActive="active">
             <i class="fa-solid fa-circle-question icon" data-tooltip="Help"></i>

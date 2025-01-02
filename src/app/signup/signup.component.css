@@ -1,0 +1,104 @@
+/* Container for the signup section */
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+   
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Signup form styling */
+  .signup-form {
+    background: #0E2F3F; /* Consistent background color with login form */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    text-align: center;
+    color: #E3D0DF;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .signup-form:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.3); /* Hover effects similar to login */
+  }
+  
+  /* Signup form title */
+  .signup-form h2 {
+    margin-bottom: 25px;
+    color: #E3D0DF;
+    font-size: 24px; /* Same font size as login title */
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  
+  /* Material field styling */
+  mat-form-field {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  mat-form-field input {
+    background: #727D8D; /* Matches login input fields */
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    border: none;
+  }
+  
+  mat-form-field input::placeholder {
+    color: #E3D0DF;
+  }
+  
+  /* Signup button */
+  button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background: #C292B4;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  
+  button:hover {
+    background: #E3D0DF;
+    color: #0E1E48;
+    transform: scale(1.05);
+  }
+  /* Link to login */
+  .login-link {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #E3D0DF;
+  }
+  
+  .login-link a {
+    color: #C292B4;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .login-link a:hover {
+    text-decoration: underline;
+    color: #E3D0DF;
+  }
+  
+  /* Responsiveness */
+  @media screen and (max-width: 480px) {
+    .signup-form {
+      width: 90%; /* Matches responsive width of login form */
+      padding: 20px;
+    }
+  
+    button {
+      font-size: 14px;
+    }
+  }
+  
