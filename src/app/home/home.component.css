@@ -13,7 +13,7 @@ body {
     padding: 50px 20px;
     max-width: 800px;
     margin: 40px auto; /* Center the content */
-    background-color: #ffffff; /* White background */
+    
    
   }
   
@@ -30,7 +30,7 @@ body {
   /* Main Heading */
   .main-heading {
     font-size: 28px;
-    color: #212529; /* Dark gray */
+    color: #0492ae; /* Dark gray */
     font-weight: bold;
     margin-bottom: 20px;
   }
@@ -38,7 +38,7 @@ body {
   /* Description */
   .description {
     font-size: 16px;
-    color: #495057; /* Medium gray */
+    color: whitesmoke; /* Medium gray */
     line-height: 1.8;
   }
   

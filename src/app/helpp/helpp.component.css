@@ -17,7 +17,8 @@ body {
 
 /* Container for the help section */
 .help {
-    background: linear-gradient(to right, rgba(78, 115, 223, 0.7), rgba(30, 61, 88, 0.7)), url('/back.png'); /* Gradient + Background image */
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+    backdrop-filter: blur(10px); /* Apply a blur effect */
     color: white;
     padding: 40px;
     border-radius: 8px;
@@ -25,8 +26,6 @@ body {
     max-width: 800px;
     margin: 40px auto;
     text-align: center;
-    background-size: cover; /* Ensures the background image covers the container */
-    background-position: center; /* Centers the background image */
     display: flex;
     justify-content: center;
     align-items: center;
