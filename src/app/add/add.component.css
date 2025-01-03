@@ -1,0 +1,47 @@
+/* Add Button Container */
+.add {
+    position: fixed;
+    bottom: 80px; /* Adjusted position */
+    right: 30px; /* Adjusted margin */
+    background: linear-gradient(135deg, #C292B4, #E3D0DF);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  
+  .add:hover {
+    background: linear-gradient(135deg, #0e017d, #C292B4);
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.5);
+    transform: translateY(-5px) scale(1.2);
+  }
+  
+  /* Icon Styling */
+  .add i {
+    color: white;
+    font-size: 28px;
+    transition: color 0.3s ease; /* Smooth color transition */
+  }
+  
+  .add:hover i {
+    color: #0E2F3F; /* Subtle color change on hover */
+  }
+  
+  /* Active Router Link */
+  a.routerLinkActive {
+    text-decoration: none;
+    outline: none;
+  }
+  
+  /* For the router-outlet (optional) */
+  router-outlet {
+    display: block;
+    margin-top: 20px;
+  }
+  
