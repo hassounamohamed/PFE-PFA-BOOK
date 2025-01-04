@@ -1,97 +1,113 @@
 /* Main Container */
 .book-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    font-family: 'Arial', sans-serif;
-  }
-  
-  /* Form Styling */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Form Styling */
+.book-form {
+  background: #0E2F3F;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+  width: 400px;
+  text-align: center;
+  color: #E3D0DF;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book-form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Form Title */
+.book-form h2 {
+  margin-bottom: 25px;
+  color: #E3D0DF;
+  font-size: 24px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* Material Fields */
+mat-form-field {
+  width: 100%;
+  margin-bottom: 25px; /* Increased margin between fields for better spacing */
+}
+
+mat-form-field input {
+  background: #727D8D;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+  border: none;
+  width: 100%;
+  font-size: 16px;
+  transition: border 0.3s ease;
+}
+
+mat-form-field input:focus {
+  border: 2px solid #C292B4; /* Focus effect for better visual feedback */
+  outline: none;
+}
+
+/* Styling the error message */
+mat-error {
+  color: red;  /* Ensure the error message is red */
+  font-size: 14px;
+  margin-top: 5px;
+  display: block; /* Ensure the error message appears below the input */
+}
+
+/* Input placeholder styling */
+mat-form-field input::placeholder {
+  color: #E3D0DF;
+}
+
+/* Button Group Styling */
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.button-group button {
+  width: 48%;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background: #C292B4;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.button-group button:hover {
+  background: #E3D0DF;
+  color: #0E1E48;
+  transform: scale(1.05);
+}
+
+/* Icon Styling in Buttons */
+.button-group button i {
+  margin-right: 5px;
+}
+
+/* Responsiveness */
+@media screen and (max-width: 480px) {
   .book-form {
-    background: #0E2F3F;
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
-    width: 400px;
-    text-align: center;
-    color: #E3D0DF;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 90%;
+    padding: 20px;
   }
-  
-  .book-form:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.3);
-  }
-  
-  /* Form Title */
-  .book-form h2 {
-    margin-bottom: 25px;
-    color: #E3D0DF;
-    font-size: 24px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    font-weight: bold;
-  }
-  
-  /* Material Fields */
-  mat-form-field {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-  
-  mat-form-field input {
-    background: #727D8D;
-    color: white;
-    border-radius: 5px;
-    padding: 10px;
-    border: none;
-  }
-  
-  mat-form-field input::placeholder {
-    color: #E3D0DF;
-  }
-  
-  /* Button Group Styling */
-  .button-group {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-  }
-  
+
   .button-group button {
-    width: 48%;
-    padding: 10px;
-    font-size: 16px;
-    font-weight: bold;
-    color: white;
-    background: #C292B4;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease, transform 0.3s ease;
+    font-size: 14px;
   }
-  
-  .button-group button:hover {
-    background: #E3D0DF;
-    color: #0E1E48;
-    transform: scale(1.05);
-  }
-  
-  /* Icon Styling in Buttons */
-  .button-group button i {
-    margin-right: 5px;
-  }
-  
-  /* Responsiveness */
-  @media screen and (max-width: 480px) {
-    .book-form {
-      width: 90%;
-      padding: 20px;
-    }
-  
-    .button-group button {
-      font-size: 14px;
-    }
-  }
-  
+}
