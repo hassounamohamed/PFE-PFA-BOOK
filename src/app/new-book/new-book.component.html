@@ -1,40 +1,57 @@
 <div class="book-container">
-    <div class="book-form">
-      <h2>ADD NEW BOOK</h2>
-      <form>
-        <mat-form-field appearance="fill">
-          <mat-label>Title</mat-label>
-          <input matInput type="text" required>
-        </mat-form-field>
-  
-        <mat-form-field appearance="fill">
-          <mat-label>Author</mat-label>
-          <input matInput type="text" required>
-        </mat-form-field>
-  
-        <mat-form-field appearance="fill">
-          <mat-label>Image URL</mat-label>
-          <input matInput type="text" required>
-        </mat-form-field>
-  
-        <mat-form-field appearance="fill">
-          <mat-label>PDF URL</mat-label>
-          <input matInput type="text" required>
-        </mat-form-field>
-  
-        <div class="button-group">
-          
-  
-          <button mat-raised-button color="warn" type="button">
-            <i class="fa-solid fa-xmark"></i> Cancel
-          </button>
+  <div class="book-form">
+    <h2>ADD NEW BOOK</h2>
+    <form #bookForm="ngForm" (ngSubmit)="onSave(bookForm)">
+      <mat-form-field appearance="fill">
+        <mat-label>Title</mat-label>
+        <input matInput type="text" placeholder="Enter Title" required name="title" ngModel #title="ngModel">
 
-          <button mat-raised-button color="primary" type="submit">
-            <i class="fa-solid fa-floppy-disk"></i> Save
-          </button>
-          
-        </div>
-      </form>
-    </div>
+        <mat-error *ngIf="title.errors?.['required'] && title.touched">
+          Title is required!
+        </mat-error>
+
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Author</mat-label> 
+        <input matInput type="text" placeholder="Enter the Author" required name="author" ngModel #author="ngModel" pattern="[a-zA-Z\s]*">
+
+        <mat-error *ngIf="author.errors?.['required'] && author.touched">
+          Author is required!
+        </mat-error>
+      
+        <mat-error *ngIf="author.errors?.['pattern'] && author.touched">
+          Author name can only contain alphabetic characters!
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Image URL</mat-label>
+        <input matInput type="text" placeholder="Enter the URL Image" required name="imageUrl" ngModel pattern="https?://.+" #imageUrl="ngModel">
+
+        <mat-error *ngIf="imageUrl.errors?.['pattern'] && imageUrl.touched">
+          Please enter a valid URL!
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>PDF URL</mat-label>
+        <input matInput type="text" placeholder="Enter the URL PDF" required name="pdfUrl" ngModel pattern="https?://.+" #pdfUrl="ngModel">
+
+        <mat-error *ngIf="pdfUrl.errors?.['pattern'] && pdfUrl.touched">
+          Please enter a valid URL!
+        </mat-error>
+      </mat-form-field>
+
+      <div class="button-group">
+        <button mat-raised-button color="warn" type="button" (click)="onCancel(bookForm)">
+          <i class="fa-solid fa-xmark"></i> Cancel
+        </button>
+
+        <button mat-raised-button color="primary" type="submit" [disabled]="bookForm.invalid">
+          <i class="fa-solid fa-floppy-disk"></i> Save
+        </button>
+      </div>
+    </form>
   </div>
-  
+</div>
